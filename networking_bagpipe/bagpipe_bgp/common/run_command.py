@@ -92,9 +92,9 @@ def _shell_command(log, command, stdin=None):
 
 def _log_stdx_if(log_fn, output, error):
     if output:
-        log_fn("  run_command stdout: %s", "\n   ".join(output))
+        log_fn("  run_command stdout: %s", b"\n   ".join(output))
     if error:
-        log_fn("  run_command stderr: %s", "\n".join(error))
+        log_fn("  run_command stderr: %s", b"\n".join(error))
 
 
 def run_command(log, command,
